@@ -20,3 +20,4 @@ app.use("/v1", router_1.Router);
 app.listen(port, function () {
     console.log("\uD83D\uDE80 Server ready at: http://localhost:".concat(port));
 });
+//# sourceMappingURL=server.js.map

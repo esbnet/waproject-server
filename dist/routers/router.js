@@ -12,3 +12,4 @@ Router.get("/");
 Router.get("/movies", MovieController_1["default"].findMovies);
 Router.get("/movies/count", MovieController_1["default"].countMovies);
 Router.get("/movies/load", MovieController_1["default"].createManyMovie);
+//# sourceMappingURL=router.js.map
