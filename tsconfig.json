@@ -1,9 +1,10 @@
 {
 	"compilerOptions": {
 		"outDir": "dist",
+		"sourceRoot": "src",
 		"module": "commonjs",
 		"target": "ES3",
-		// "sourceMap": true,
+		"sourceMap": true,
 		"strict": true,
 		"lib": ["esnext"],
 		"esModuleInterop": true,
