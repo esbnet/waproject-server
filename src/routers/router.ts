@@ -2,7 +2,7 @@ import express from "express";
 
 const Router = express.Router();
 
-import MovieController from "../controllers/movie_controller/MovieController";
+import MovieController from "../controllers/MovieController";
 
 Router.get("/");
 
