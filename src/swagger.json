@@ -1,0 +1,67 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "This is a sample WA Films",
+		"description": "Este é um servidor de exemplo para uma loja de filmes",
+		"version": "1.0",
+		"contact": {
+			"name": "Edmilson Soares",
+			"email": "esbdev@gmail.com",
+			"url": "https://github.com/esbdev"
+		},
+		"termsOfService": "http://localhost:9000/terms"
+	},
+	"servers": [
+		{
+			"url": "http://localhost:9000/v1",
+			"description": "API de avalação"
+		},
+		{
+			"url": "http://esbdev.vercel.waproject/",
+			"description": "API de produção"
+		}
+	],
+	"paths": {
+		"/movies": {
+			"get": {
+				"operationId": "movies",
+				"tags": ["/movies"],
+				"description": "Busca dados de filmes da API externa para a base da aplicação",
+				"responses": {}
+			}
+		},
+		"/movies/count": {
+			"get": {
+				"operationId": "movies/count",
+				"tags": ["/movies/count"],
+				"description": "Retorna a quantidade de filmes",
+				"parameters": [],
+				"responses": {}
+			}
+		},
+		"/movies/load": {
+			"get": {
+				"operationId": "movies/load",
+				"tags": ["/movies/load"],
+				"description": "Popula a base de dados da aplicação buscando em uma API externa",
+				"parameters": [],
+				"responses": {}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Films": {
+				"type": "object",
+				"properties": {
+					"id": { "type": "number" },
+					"title": { "type": "string" },
+					"movie_banner": { "type": "string" },
+					"description": { "type": "string" },
+					"director": { "type": "string" },
+					"producer": { "type": "string" }
+				}
+			}
+		}
+	}
+}
