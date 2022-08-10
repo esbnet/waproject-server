@@ -6,6 +6,7 @@ A API prove três end-ponts que permitem popular a base de dados, contabilizar a
 
 ## Principais Tech'S
 
+* Node - Linguagem de programação
 * Express - Prover as rotas da API
 * Axios - Acessar a API externa
 * Prisma - Gravar e recuperar dados
