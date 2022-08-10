@@ -13,11 +13,7 @@
 	},
 	"servers": [
 		{
-			"url": "http://localhost:9000/v1",
-			"description": "API de avalação"
-		},
-		{
-			"url": "http://esbdev.vercel.waproject/",
+			"url": "https://esbnetwaproject.herokuapp.com/v1",
 			"description": "API de produção"
 		}
 	],
