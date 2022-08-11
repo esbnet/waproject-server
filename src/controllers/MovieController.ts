@@ -5,7 +5,7 @@ import { Request, Response } from "express";
 const prisma = new PrismaClient();
 
 export default {
-	async createManyMovie(request: Request, response: Response) {
+	async createManyMovies(request: Request, response: Response) {
 		try {
 			const movies = await axios({
 				method: "GET",
@@ -21,12 +21,23 @@ export default {
 
 			await prisma.movie.createMany({
 				data: movies,
-				skipDuplicates: true, // Skip 
+				skipDuplicates: true, // Skip
 			});
 
 			return response
 				.status(201)
 				.json("Todos os registros foram gravados com sucesso!");
+		} catch (error) {
+			return response.status(500).send({ error: error });
+		}
+	},
+
+	async resetMovies(request: Request, response: Response) {
+		try {
+			await prisma.movie.deleteMany();
+			return response
+				.status(200)
+				.json("Todos os registros foram apagados com sucesso!");
 		} catch (error) {
 			return response.status(500).send({ error: error });
 		}
