@@ -10,7 +10,7 @@ const app = express();
 app.use(cors({ origin: "https://waproject-web.vercel.app" }));
 app.use(express.json());
 
-Router.get("/", (req: Request, res: Response) => {
+app.get("/", (req: Request, res: Response) => {
 	return res.send("<h1>Welcome API WAproject!</>");
 });
 
