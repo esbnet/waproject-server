@@ -85,6 +85,6 @@ yarn start ou npm run start
 
 Também existe uma documentação da API com as principais informações dos recursos disponiveis. 
 
-Para acessar utilize o endereço: https://esbnetwaproject.herokuapp.com/api-docs e será apresntado a tela abaixo.
+Para acessar utilize o endereço: https://esbnetwaproject.herokuapp.com/v1/api-docs e será apresntado a tela abaixo.
 
 ![Tela da documentação da API](./src/assets/images/api-doc.png)
