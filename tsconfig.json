@@ -3,7 +3,7 @@
 		"outDir": "dist",
 		"sourceRoot": "src",
 		"module": "commonjs",
-		"target": "ES3",
+		"target": "ES6",
 		"sourceMap": true,
 		"strict": true,
 		"lib": ["esnext"],
