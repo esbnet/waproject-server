@@ -7,7 +7,7 @@ import { Router } from "./routers/router";
 const port = process.env.PORT || 9000;
 const app = express();
 
-app.use(cors({ origin: ["https://waproject-web.vercel.app", "http://waproject-web.vercel.app"] }));
+app.use(cors({ origin: ["waproject-web.vercel.app/*"] }));
 app.use(express.json());
 
 app.use("/v1", Router);
