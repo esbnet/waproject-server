@@ -43,7 +43,7 @@ var client_1 = require("@prisma/client");
 var axios_1 = __importDefault(require("axios"));
 var prisma = new client_1.PrismaClient();
 exports["default"] = {
-    createManyMovie: function (request, response) {
+    createManyMovies: function (request, response) {
         return __awaiter(this, void 0, void 0, function () {
             var movies, error_1;
             return __generator(this, function (_a) {
@@ -76,6 +76,27 @@ exports["default"] = {
                         error_1 = _a.sent();
                         return [2 /*return*/, response.status(500).send({ error: error_1 })];
                     case 4: return [2 /*return*/];
+                }
+            });
+        });
+    },
+    resetMovies: function (request, response) {
+        return __awaiter(this, void 0, void 0, function () {
+            var error_2;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        _a.trys.push([0, 2, , 3]);
+                        return [4 /*yield*/, prisma.movie.deleteMany()];
+                    case 1:
+                        _a.sent();
+                        return [2 /*return*/, response
+                                .status(200)
+                                .json("Todos os registros foram apagados com sucesso!")];
+                    case 2:
+                        error_2 = _a.sent();
+                        return [2 /*return*/, response.status(500).send({ error: error_2 })];
+                    case 3: return [2 /*return*/];
                 }
             });
         });
