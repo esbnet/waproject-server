@@ -6,7 +6,7 @@ const Router = express.Router();
 const swaggerDocs = require("../swagger.json");
 
 Router.get("/", (req: Request, res: Response) => {
-	return res.send("<h1>Welcome API WAproject!</h1></br><p>versão: 1.0</p> ");
+	return res.send("<h1>Welcome API WAproject!</h1><p>versão: 1.0</p> ");
 });
 Router.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 Router.get("/terms", (req, res) => {
