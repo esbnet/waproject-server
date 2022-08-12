@@ -50,7 +50,7 @@ export default {
 
 	async countMovies(request: Request, response: Response) {
 		const movieCount = await prisma.movie.count();
-		response.json({ count: movieCount });
+		response.json(movieCount);
 	},
 
 	// async findMoviesPaginate(request: Request, response: Response) {
