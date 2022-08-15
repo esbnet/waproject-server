@@ -71,7 +71,7 @@
 				"parameters": [],
 				"responses": {
 					"200": {
-						"description": "Todos os registros foram gravados com sucesso!",
+						"description": "Simples mensagem de texto",
 						"content": {
 							"application/json": {
 								"schema": {
@@ -79,6 +79,16 @@
 									"items": {
 										"$ref": "#/components/schemas/load"
 									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Unexpected error",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorModel"
 								}
 							}
 						}
@@ -101,12 +111,11 @@
 				}
 			},
 			"count": {
-				"type": "number"				
+				"type": "number"
 			},
 			"load": {
 				"type": "string"
 			}
-
 		}
 	}
 }
