@@ -23,7 +23,21 @@
 				"operationId": "movies",
 				"tags": ["/movies"],
 				"description": "Busca dados de filmes da API externa para a base da aplicação",
-				"responses": {}
+				"responses": {
+					"200": {
+						"description": "A lista of movies",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/movies"
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		},
 		"/movies/count": {
@@ -32,7 +46,21 @@
 				"tags": ["/movies/count"],
 				"description": "Retorna a quantidade de filmes",
 				"parameters": [],
-				"responses": {}
+				"responses": {
+					"200": {
+						"description": "returns the number of movies",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/count"
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		},
 		"/movies/load": {
@@ -41,13 +69,27 @@
 				"tags": ["/movies/load"],
 				"description": "Popula a base de dados da aplicação buscando em uma API externa",
 				"parameters": [],
-				"responses": {}
+				"responses": {
+					"200": {
+						"description": "Todos os registros foram gravados com sucesso!",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"$ref": "#/components/schemas/load"
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 	},
 	"components": {
 		"schemas": {
-			"Films": {
+			"movies": {
 				"type": "object",
 				"properties": {
 					"id": { "type": "number" },
@@ -57,7 +99,14 @@
 					"director": { "type": "string" },
 					"producer": { "type": "string" }
 				}
+			},
+			"count": {
+				"type": "number"				
+			},
+			"load": {
+				"type": "string"
 			}
+
 		}
 	}
 }
